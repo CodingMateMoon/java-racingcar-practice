@@ -12,4 +12,11 @@ public class ValidationUtilTest {
         boolean result = ValidationUtil.checkValidation(9);
         assertThat(result).isTrue();
     }
+
+    @Test
+    void checkCarNameLimit() {
+
+        assertThat(ValidationUtil.checkCarNameLimitOk("testfive")).isFalse();
+        assertThat(ValidationUtil.checkCarNameLimitOk("itsok")).isTrue();
+    }
 }

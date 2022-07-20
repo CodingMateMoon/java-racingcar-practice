@@ -8,4 +8,8 @@ public class ValidationUtil {
     public static boolean checkValidation(int input) {
         return MIN <= input && input <= MAX;
     }
+
+    public static boolean checkCarNameLimitOk(String input) {
+        return input.length() <= 5;
+    }
 }
