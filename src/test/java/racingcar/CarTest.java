@@ -12,4 +12,6 @@ public class CarTest {
         car.racing(4);
         assertThat(car.getPosition()).isEqualTo(1);
     }
+
+
 }

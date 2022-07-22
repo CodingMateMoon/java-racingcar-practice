@@ -21,7 +21,7 @@ public class CarsTest {
     }
 
     @Test
-    void carsRacing() {
+    void racingCars() {
 
         PlayResult playResult = cars.racingCars(5);
 

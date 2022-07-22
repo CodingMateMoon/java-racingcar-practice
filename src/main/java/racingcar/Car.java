@@ -21,4 +21,14 @@ public class Car {
     public int getPosition() {
         return position;
     }
+
+    public String printCarStatus() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(this.name);
+        stringBuilder.append(" : ");
+        for (int i = 0; i < position; i++) {
+            stringBuilder.append("-");
+        }
+        return stringBuilder.toString();
+    }
 }
