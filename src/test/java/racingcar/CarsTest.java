@@ -46,4 +46,8 @@ public class CarsTest {
         Car car = result.get();
         assertThat(car.getName()).isEqualTo("pobi");
     }
+
+    @Test
+    void printResult() {
+    }
 }
