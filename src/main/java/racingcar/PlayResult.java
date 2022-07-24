@@ -3,9 +3,9 @@ package racingcar;
 import java.util.List;
 
 public class PlayResult {
-    private final List<Car> winners;
+    private final List<CarBefore> winners;
 
-    public PlayResult(List<Car> winners) {
+    public PlayResult(List<CarBefore> winners) {
         this.winners = winners;
     }
 
