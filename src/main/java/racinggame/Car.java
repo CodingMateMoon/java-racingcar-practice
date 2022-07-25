@@ -1,6 +1,7 @@
-package racingcar;
+package racinggame;
 
-import com.sun.tools.javac.util.StringUtils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Random;
 
@@ -26,12 +27,17 @@ public class Car {
         return name;
     }
 
+    public void move(int randomNo) {
+        if(randomNo >= FORWARD_NUM)
+            this.position++;
+    }
+
     public void move() {
         if(getRandomNo() >= FORWARD_NUM)
             this.position++;
     }
 
-    private int getRandomNo() {
+    protected int getRandomNo() {
         Random random = new Random();
         return random.nextInt(MAX_BOUND);
     }
