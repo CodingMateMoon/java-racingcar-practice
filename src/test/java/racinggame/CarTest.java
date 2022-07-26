@@ -6,22 +6,18 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CarTest {
+
     @Test
     void 이동() {
-        Car car = new Car("pobi"){
-            @Override
-            protected int getRandomNo() {
-                return 4;
-            }
-        };
-        car.move();
+        Car car = new Car("pobi");
+        car.move(4);
         assertThat(car.getPosition()).isEqualTo(1);
     }
 
     @Test
     void 정지() {
         Car car = new Car("pobi");
-        car.move();
+        car.move(3);
         assertThat(car.getPosition()).isEqualTo(0);
     }
 }
