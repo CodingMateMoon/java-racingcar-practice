@@ -2,6 +2,7 @@ package racinggame;
 
 
 import org.apache.commons.lang3.StringUtils;
+import racingcar.MovingStrategy;
 
 import java.util.Random;
 
@@ -25,6 +26,11 @@ public class Car {
 
     public String getName() {
         return name;
+    }
+
+    public void move(MovingStrategy movingStrategy) {
+        if(movingStrategy.movable())
+            this.position++;
     }
 
     // 처음부터 변경 가능성을 예측하며 과도한 설계를 하기보다 서비스를 유지보수하면서 자주 변경이 일어나는 경우 따로 인터페이스로 추출하는 것도 한 가지 방법
