@@ -18,12 +18,7 @@ public class CarTest {
     @Test
     void 정지() {
         Car car = new Car("pobi");
-        car.move(new MovingStrategy() {
-            @Override
-            public boolean movable() {
-                return false;
-            }
-        });
+        car.move(() -> false);
         assertThat(car.getPosition()).isEqualTo(0);
     }
 }
