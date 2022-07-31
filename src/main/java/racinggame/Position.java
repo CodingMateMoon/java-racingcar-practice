@@ -3,7 +3,7 @@ package racinggame;
 import java.util.Objects;
 
 public class Position {
-    private final int position;
+    private  int position;
 
     public Position(int position)
     {
@@ -15,6 +15,15 @@ public class Position {
 
     public Position() {
         this(0);
+    }
+
+    public Position move() {
+        this.position += 1;
+        return this;
+    }
+
+    public void move2() {
+        this.position += 1;
     }
 
     public int getPosition() {
@@ -33,4 +42,10 @@ public class Position {
     public int hashCode() {
         return Objects.hash(position);
     }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+
 }

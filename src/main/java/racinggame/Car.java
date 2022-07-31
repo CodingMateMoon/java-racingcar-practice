@@ -3,6 +3,7 @@ package racinggame;
 
 import org.apache.commons.lang3.StringUtils;
 import racingcar.MovingStrategy;
+import racingcar.Name;
 
 import java.util.Random;
 
@@ -10,15 +11,13 @@ public class Car {
 
     private static final int FORWARD_NUM = 4;
     private static final int MAX_BOUND = 10;
-    private final String name;
+    private final Name name;
     private int position = 0;
     private Position position2;
 
-    public Car(final String name) {
-        if(StringUtils.isBlank(name)){
-            throw new IllegalArgumentException("자동차 이름은 값이 존재해야 합니다.");
-        }
-        this.name = name.trim();
+    public Car(final Name name) {
+
+        this.name = name;
         this.position2 = new Position();
     }
 
@@ -26,7 +25,7 @@ public class Car {
         return position;
     }
 
-    public String getName() {
+    public Name getName() {
         return name;
     }
 
@@ -37,8 +36,9 @@ public class Car {
 
     // 처음부터 변경 가능성을 예측하며 과도한 설계를 하기보다 서비스를 유지보수하면서 자주 변경이 일어나는 경우 따로 인터페이스로 추출하는 것도 한 가지 방법
     public void move(int randomNo) {
-        if(randomNo >= FORWARD_NUM)
-            this.position++;
+        if(randomNo >= FORWARD_NUM) {
+            position2.move();
+        }
     }
 
     public void move() {
