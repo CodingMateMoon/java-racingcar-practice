@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Cars {
+public class CarsBefore {
     private final List<CarBefore> carList;
 
-    public Cars(List<CarBefore> cars) {
+    public CarsBefore(List<CarBefore> cars) {
         this.carList = cars;
     }
 

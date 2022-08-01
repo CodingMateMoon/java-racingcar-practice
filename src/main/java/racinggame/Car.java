@@ -15,17 +15,22 @@ public class Car {
     private int position = 0;
     private Position position2;
 
-    public Car(final Name name) {
+    public Car(final String name) {
 
-        this.name = name;
-        this.position2 = new Position();
+        this(name, 0);
+    }
+
+    public Car(final String name, int position) {
+
+        this.name = new Name(name);
+        this.position2 = new Position(position);
     }
 
     public int getPosition() {
         return position;
     }
 
-    public Name getName() {
+    public Name  getName() {
         return name;
     }
 

@@ -9,13 +9,13 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CarsTest {
+public class CarsBeforeTest {
 
-    private Cars cars;
+    private CarsBefore cars;
 
     @BeforeEach
     void setUp() {
-        cars = new Cars(Arrays.asList(new CarBefore("pobi", 0), new CarBefore("crong", 0), new CarBefore("honux", 0)));
+        cars = new CarsBefore(Arrays.asList(new CarBefore("pobi", 0), new CarBefore("crong", 0), new CarBefore("honux", 0)));
     }
 
     @Test
