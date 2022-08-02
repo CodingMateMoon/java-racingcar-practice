@@ -48,4 +48,7 @@ public class Position {
     }
 
 
+    public boolean isBiggerThan(Position maxPosition) {
+        return this.position >= maxPosition.position;
+    }
 }

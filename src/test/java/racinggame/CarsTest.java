@@ -13,7 +13,7 @@ public class CarsTest {
     @Test
     void findWinners() {
         Car pobi = new Car("pobi", 2);
-        Car moon = new Car("moon", 1);
+        Car moon = new Car("moon", 2);
         Car jang = new Car("jang", 0);
         List<Car> original = Arrays.asList(pobi, moon, jang);
         Cars cars = new Cars(original);
